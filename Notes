@@ -1,0 +1,20 @@
+Can Flutter do this?
+2020-08-04
+
+
+- For all the below, is there a code that is cross iOS/Android?
+- Make Phone Call
+- Make Emergency Contacts (EC) List
+    - (op) Make Widget to make popup window EC list
+    - (op) Make phone call using EC
+- send text messages to EC
+- GPS info to EC
+- Record video, send to EC from device gallery
+    - ***(op) video stream
+- Access EC in platform
+
+
+
+
+*** Priority Stretch Goal
+(op) Optional Goal
