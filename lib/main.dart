@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:geolocator/geolocator.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -29,7 +30,9 @@ class Home extends StatelessWidget {
             child: new Text("Emergency Contacts")
           ),
           new FlatButton(
-            child: new Text("GPS Info")
+            onPressed: () => showLocation(context),
+            //Tooltip()
+            child: new Text("GPS Info"),
           ),
           new FlatButton(
               child: new Text("Video")
@@ -37,6 +40,11 @@ class Home extends StatelessWidget {
         ]
     ),
   );
+}
+
+void showLocation(BuildContext context)async{
+  Position position = await Geolocator().getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+  showDialog(context: context, builder: (context){return AlertDialog(title: Text(position.toString()),);});
 }
 
 void main() {
